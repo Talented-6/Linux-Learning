@@ -106,15 +106,13 @@ zip(-r 递归压缩) unzip(-d 指定解压后文件的存放目录) (/home/*仍�
 tar 打包指令(-c 产生打包文件，-v显示详细信息，-f指定压缩后的文件名，-z使用gzip指令，-x解包提取extract, tar文件，-C指定解压后的路径(跟在末尾且必须确保文件夹存在)) 压缩-zcvf 解压-zxvf  (打包压缩要在相对路径下压缩)
 ```
 # 组管理和文件管理
-```
-所有者(owner) 所在组(group) 其他组()
-chown <User-Name> <File-Name> 改变所有者
-groupadd
-useradd -g <Group-Name> <User-Name>
-chgrp <Group-Name> <File-Name> 改变所在组
-usermod -d <Directory-Name> <User-Name> 用户要有进入这个目录的权限
+    所有者(owner) 所在组(group) 其他组()
+    chown <User-Name> <File-Name> 改变所有者
+    groupadd
+    useradd -g <Group-Name> <User-Name>
+    chgrp <Group-Name> <File-Name> 改变所在组
+    usermod -d <Directory-Name> <User-Name> 用户要有进入这个目录的权限
 
--rw-r--r-- (第0位确定文件类型 l链接 d目录 c字符设备文件 b块设备 -文件)(r read w write x execute)
-```
-* rwx作用到文件。w表示可以修改，但是不代表可以删除，删除一个文件的前提是对该文件所在目录有w的权限
-* rwx作用到目录。x代表可以进入该目录。w表示可以在目录内创建删除重命令`目录`或文件
+    -rw-r--r-- (第0位确定文件类型 l链接 d目录 c字符设备文件 b块设备 -文件)(r read w write x execute)
+- rwx作用到`文件`。w表示可以修改，但是不代表可以删除，删除一个文件的前提是对该文件所在目录有w的权限
+- rwx作用到`目录`。x代表可以进入该目录。w表示可以在目录内创建删除重命令目录或文件
