@@ -71,4 +71,42 @@ mkdir (-p) <Directory-Name> (p代表多级目录)
 rmdir -rf
 rm -rf (recursion force)
 cp (-r) <source> <tartget>
+\cp （原始命令）强制覆盖不提示
+cat -n | more 显示行号
+more 和 less都可以单独使用，less更适合大文件的读取
+echo输出内容到控制台
+head -n 5 <File> 默认查看前10行
+tail -n 5 默认显示后10行
+tail -f 追踪文件的变化
+> 输出重定向(覆盖)
+>> 追加
+软链接(快捷方式)(符号链接)(pwd不显示为目标)
+history (<number>)查看用过的历史命令  histroy | head -10 (history在fish不便使用) (!行数执行先前执行过的命令)(!!执行最后执行的命令)
+```
+# 时间日期类型
+```
+date 
++%Y年份 %m月份 %d天 %H %M %S 
+date "+%Y-%m-%d %H:%M:%S"
+date -s "2022-7-12 20:01:03 # 设置时间
+cal (<Year>)显示日历
+```
+# 查找指令
+```
+find [搜索目录] [选项--name --user -size<+n大于-n小于n等于>]
+updatedb -> locate  (管理员需要定期更新数据库)
+which 查看某个指令在哪个目录下
+‘|’，表示将前一个命令的处理结果输出传递给后面的命令处理
+grep <-n显示行号/i忽略字母大小写> 
+```
+# 压缩和解压
+```
+gzip 压缩解压缩 gunzip解压
+zip(-r 递归压缩) unzip(-d 指定解压后文件的存放目录) (/home/*仍是将home目录也压缩，而不是只压缩子目录)
+tar 打包指令(-c 产生打包文件，-v显示详细信息，-f指定压缩后的文件名，-z使用gzip指令，-x解包tar文件，-C指定解压后的路径(跟在末尾且必须确保文件夹存在)) 压缩-zcvf 解压-zxvf  (打包压缩要在相对路径下压缩)
+```
+# 组管理和文件管理
+```
+所有者(owner) 所在组(group) 其他组()
+
 ```
